@@ -78,7 +78,7 @@ router.put("/User", (req, res) => {
 //GET
 router.delete("/User", (req, res) => {
     if (!req.query.email) {
-        return res.status(400).send("Missing URL param: email");
+        return res.status(400).send("Missing URL param: email.");
     }
     UsersModel.findOneAndDelete({
         email: req.query.email
